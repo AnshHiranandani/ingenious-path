@@ -1,0 +1,737 @@
+/* Style for the form container */
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for form inputs */
+.form-container input[type=text], .form-container input[type=email] {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Style for submit button */
+.form-container button[type=submit] {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Hover effect for submit button */
+.form-container button[type=submit]:hover {
+    background-color: #45a049;
+}
+
+/* Style for advice container */
+#advice-container {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Style for advice text */
+#advice-container p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  /* Header styles */
+  header {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  header h1 {
+    font-size: 36px;
+    margin: 0;
+    padding: 10px;
+  }
+  
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav ul li {
+    display: inline;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    transition: background-color 0.2s ease;
+  }
+  
+  nav ul li a:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Hero section styles */
+  #hero {
+    background-image: url("engineering_hero.jpg");
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    padding: 150px 0;
+  }
+  
+  #hero h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+  }
+  
+  #hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+  
+  .btn {
+    display: inline-block;
+    background-color: #fff;
+    color: black;
+    padding: 16px 32px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+  }
+  
+  #hero .btn:hover {
+    background-color: #f2f2f2;
+  }
+  
+  /* Common section styles */
+  section {
+    padding: 100px 0;
+  }
+  
+  section h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  /* Resources section styles */
+  #resources p {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+  
+  #resources .btn {
+    font-size: 18px;
+  }
+  
+  /* Tutorials section styles */
+  #tutorials .tutorial-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 30px;
+  }
+  
+  .tutorial-card {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .tutorial-card img {
+    max-width: 100%;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+  
+  .tutorial-card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .tutorial-card p {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  .tutorial-card .btn {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.2s ease;
+  }
+  .blog-cards .btn {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.2s ease;
+  }
+  
+  .tutorial-card .btn:hover {
+    background-color: #0056b3;
+  }
+  .blog-cards .btn:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Careers section styles */
+  #careers p {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+  
+  #careers .btn {
+    font-size: 18px;
+  }
+  
+  /* Job listings section styles */
+  #joblistings .job-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 30px;
+  }
+  
+  .job-card {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .job-card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .job-card p {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .job-card .btn {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.2s ease;
+  }
+  
+  .job-card .btn:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Events section styles */
+  #events p {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+  
+  #events .event-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 30px;
+  }
+  
+  .event-card {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .event-card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .event-card p {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .event-card .btn {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.2s ease;
+  }
+  
+  .event-card .btn:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Contact section styles */
+  #contact p {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+  
+  .contact-form {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .contact-form textarea {
+    resize: vertical;
+  }
+  
+  .contact-form .btn {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .contact-form .btn:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Footer styles */
+  footer {
+    background-color: #f4f4f4;
+    text-align: center;
+    padding: 40px 0;
+    color: #777;
+  }
+  
+  footer p {
+    margin: 0;
+    font-size: 18px;
+  }
+  #careers .careers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 30px;
+  }
+  
+  .career-card {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .career-card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .career-card p {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  #blog .blog-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 30px;
+  }
+  
+  .blog-card {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .blog-card img {
+    max-width: 100%;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+  
+  .blog-card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .blog-card p {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  /* Additional styles for community section and forum section */
+  #community p {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+  
+  /* Additional styles for intro to engineering section */
+  #intro-engineering p {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+  .hero {
+    position: relative;
+    overflow: hidden;
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+    padding: 150px 0;
+  }
+  
+  .hero:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("animation-background.gif");
+    background-size: cover;
+    background-position: center;
+    opacity: 0.3;
+    z-index: -1;
+    animation: animatedBackground 30s linear infinite;
+  }
+  
+  @keyframes animatedBackground {
+    0% { transform: scale(1) translateX(0); }
+    50% { transform: scale(1.1) translateX(10%); }
+    100% { transform: scale(1) translateX(0); }
+  }
+  
+  /* Add vibrant colors to various sections */
+  .about {
+    background-color: #f0a500;
+    color: #fff;
+  }
+  
+  .resources {
+    background-color: #6ca755;
+    color: #fff;
+  }
+  
+  .careers {
+    background-color: #a55d6c;
+    color: #fff;
+  }
+  
+  .blog {
+    background-color: #4e8ac9;
+    color: #fff;
+  }
+  
+  .community {
+    background-color: #dd5c68;
+    color: #fff;
+  }
+  
+  .forum {
+    background-color: #21b6a8;
+    color: #fff;
+  }
+  
+  .intro-engineering {
+    background-color: #f17b50;
+    color: #fff;
+  }
+  
+  /* Add animations and interactive elements */
+  .tutorial-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  .blog-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  .event-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  .contact-form .btn {
+    background-color: #ff5050;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .contact-form .btn:hover {
+    background-color: #e60000;
+  }
+  body {
+    background-color: #121212;
+    color: #f0f0f0;
+  }
+  
+  /* Header styles */
+  .header {
+    background-color: #1e1e1e;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Hero section styles */
+  .hero {
+    background-image: url("engineering_hero_dark.jpg");
+  }
+  
+  /* Common section styles */
+  section {
+    padding: 100px 0;
+  }
+  
+  /* Add sleek animations and minimalistic design */
+  .tutorial-card,
+  .blog-card,
+  .event-card,
+  .career-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .tutorial-card,
+  .blog-card,
+  .event-card {
+    background-color: #2e2e2e;
+    color: #fff;
+  }
+  
+  .career-card {
+    background-color: #333333;
+    color: #fff;
+  }
+  
+  /* Dark mode color scheme for buttons and form */
+  .contact-form .btn,
+  .btn {
+    background-color: gray;
+  }
+  
+  .contact-form .btn:hover,
+  .btn:hover {
+    background-color: #0097a7;
+  }
+  
+  /* Minimalistic outline styles */
+  .career-card,
+  .tutorial-card,
+  .blog-card,
+  .event-card,
+  .contact-form input,
+  .contact-form textarea {
+    border: 1px solid #444;
+    border-radius: 5px;
+  }
+  
+  /* Vibrant scheme */
+  .about {
+    background-color: #1a237e;
+  }
+  
+  .resources {
+    background-color: #006064;
+  }
+  
+  .blog {
+    background-color: #01579b;
+  }
+  
+  .community {
+    background-color: #b71c1c;
+  }
+  
+  .intro-engineering {
+    background-color: #e65100;
+  }
+  
+  /* Vibrant sea colors for brighter accents */
+  .career-card h3,
+  .tutorial-card h3,
+  .blog-card h3,
+  .event-card h3 {
+    color: #00b8d4;
+  }
+  /* Dark mode color scheme */
+  body {
+    background-color: #121212;
+    color: #f0f0f0;
+  }
+  
+  /* Header styles */
+  .header {
+    background-color: #1e1e1e;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Hero section styles */
+  .hero {
+    background-image: url("engineering_hero_dark.jpg");
+  }
+  
+  /* Common section styles */
+  section {
+    padding: 100px 0;
+  }
+  
+  /* Add sleek animations and minimalistic design */
+  .tutorial-card,
+  .blog-card,
+  .event-card,
+  .career-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .tutorial-card,
+  .blog-card,
+  .event-card {
+    background-color: #2e2e2e;
+    color: #fff;
+  }
+  
+  .career-card {
+    background-color: #333333;
+    color: #fff;
+  }
+  
+  /* Dark mode color scheme for buttons and form */
+  .contact-form .btn,
+  .btn {
+    border-color: grey;
+  }
+  
+  .contact-form .btn:hover,
+  .btn:hover {
+    background-color: #0097a7;
+  }
+  
+  /* Minimalistic outline styles */
+  .career-card,
+  .tutorial-card,
+  .blog-card,
+  .event-card,
+  .contact-form input,
+  .contact-form textarea {
+    border: 1px solid #444;
+    border-radius: 5px;
+  }
+  
+  /* Vibrant scheme */
+  .about {
+    background-color: #1a237e;
+  }
+  
+  .resources {
+    background-color: #006064;
+  }
+  
+  .blog {
+    background-color: #01579b;
+  }
+  
+  .community {
+    background-color: #b71c1c;
+  }
+  
+  .intro-engineering {
+    background-color: #e65100;
+  }
+  
+  /* Vibrant sea colors for brighter accents */
+  .career-card h3,
+  .tutorial-card h3,
+  .blog-card h3,
+  .event-card h3 {
+    color: #00b8d4;
+  }
+  
+  /* Add hoverlink styles */
+  nav ul li a {
+    display: inline-block;
+    padding: 15px;
+    text-decoration: none;
+    border-radius: 5px solid transparent; /* 5px border at rest */
+    transition: border-width 0.3s ease;
+  }
+  .logo{
+     color: whitesmoke
+  }
+  
+  .tutorials .tutorial-card,
+  .blog .blog-card,
+  .events .event-card,
+  .careers .career-card {
+    width: calc(50% - 15px); /* Adjust the width as needed */
+    /* The '15px' is to account for margins or gaps between cards */
+    /* Add any additional styling you need for these elements */
+  }
