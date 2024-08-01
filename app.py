@@ -3,7 +3,7 @@ import openai
 import logging
 
 # Instantiate the OpenAI client with your API key
-openai.api_key = 'sk-proj-n7Qn76Z8xheioMcvwRzkT3BlbkFJtWDWFjiIP9ZrSBAFod7R'
+openai.api_key = 'sk-proj-1UXCgAKORfDMCBztR4VgT3BlbkFJP0jyAnegWdRYlJ33SQ4R'
 
 app = Flask(__name__)
 
@@ -11,13 +11,28 @@ app = Flask(__name__)
 logging.basicConfig(level=logging.DEBUG)
 
 @app.route('/')
-def ai_assistant():
-    return render_template('ai-assistant.html')
-
-@app.route('/')
 def index():
     return render_template('index.html')
 
+@app.route('/index.html')
+def index_1():
+    return render_template('index.html')
+
+@app.route('/ai-assistant.html')
+def ai_assistant():
+    return render_template('ai-assistant.html')
+
+@app.route('/careers.html')
+def careers():
+    return render_template('careers.html')
+
+@app.route('/event.html')
+def event():
+    return render_template('event.html')
+
+@app.route('/about.html')
+def about():
+    return render_template('about.html')
 
 @app.route('/predict', methods=['POST'])
 def predict():
@@ -29,7 +44,7 @@ def predict():
         
         # Get the AI-generated response using the chat completions endpoint
         response = openai.ChatCompletion.create(
-            model="gpt-4o-mini",
+            model="gpt-3.5-turbo",
             messages=[{"role": "user", "content": user_message}],
             max_tokens=1000,
             n=1,

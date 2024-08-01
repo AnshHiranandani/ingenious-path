@@ -1,14 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Assistant</title>
-    <link rel="stylesheet" type="text/css" href="static/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Career Assistant</title>
+  <link rel="stylesheet" type="text/css" href="static/styles.css">
 </head>
 <body>
-    <h1>AI Assistant</h1>
-    <form id="assistant-form">
+  <header>
+    <nav class="navbar">
+      <div class="container">
+        <h1 class="logo">Engineering Enthusiasts</h1>
+        <ul class="nav-menu">
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="about.html">ABOUT</a></li>
+          <li><a href="resources.html">RESOURCES</a></li>
+          <li><a href="careers.html">CAREERS</a></li>
+          <li><a href="event.html">EVENTS</a></li>
+          <li><a href="contact.html">CONTACT US</a></li>
+          <li><a href="ai-assistant.html">AI CAREER ASSISTANT</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <section id="ai-assistant" class="form-container">
+    <div class="container">
+      <h1>AI Career Assistant</h1>
+      <form id="assistant-form">
         <label for="current-field">Current Field:</label>
         <input type="text" id="current-field" name="current_field"><br><br>
         
@@ -16,50 +35,58 @@
         <input type="text" id="desired-field" name="desired_field"><br><br>
         
         <button type="submit">Get Advice</button>
-    </form>
-
-    <div id="advice-container">
+      </form>
+  
+      <div id="advice-container">
         <!-- Advice from AI will be displayed here -->
+      </div>
     </div>
+  </section>
 
-    <script>
-        document.getElementById('assistant-form').addEventListener('submit', function(event) {
-            event.preventDefault();
+  <footer>
+    <div class="container">
+      <p>&copy; 2023 IngeniousPath. All rights reserved.</p>
+    </div>
+  </footer>
 
-            // Fetch input values
-            const currentField = document.getElementById('current-field').value;
-            const desiredField = document.getElementById('desired-field').value;
+  <script>
+    document.getElementById('assistant-form').addEventListener('submit', function(event) {
+        event.preventDefault();
 
-            // Create JSON object with input data
-            const formData = {
-                current_field: currentField,
-                desired_field: desiredField
-            };
+        // Fetch input values
+        const currentField = document.getElementById('current-field').value;
+        const desiredField = document.getElementById('desired-field').value;
 
-            // Send POST request to Flask backend
-            fetch('/predict', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(formData)
-            })
-            .then(response => response.json())
-            .then(data => {
-                // Display AI advice or error message
-                const adviceContainer = document.getElementById('advice-container');
-                if (data.advice) {
-                    adviceContainer.innerHTML = `<p>${data.advice}</p>`;
-                } else if (data.error) {
-                    adviceContainer.innerHTML = `<p>Error: ${data.error}</p>`;
-                }
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                const adviceContainer = document.getElementById('advice-container');
-                adviceContainer.innerHTML = `<p>Error: ${error.message}</p>`;
-            });
+        // Create JSON object with input data
+        const formData = {
+            current_field: currentField,
+            desired_field: desiredField
+        };
+
+        // Send POST request to Flask backend
+        fetch('/predict', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(formData)
+        })
+        .then(response => response.json())
+        .then(data => {
+            // Display AI advice or error message
+            const adviceContainer = document.getElementById('advice-container');
+            if (data.advice) {
+                adviceContainer.innerHTML = `<p>${data.advice}</p>`;
+            } else if (data.error) {
+                adviceContainer.innerHTML = `<p>Error: ${data.error}</p>`;
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            const adviceContainer = document.getElementById('advice-container');
+            adviceContainer.innerHTML = `<p>Error: ${error.message}</p>`;
         });
-    </script>
+    });
+  </script>
 </body>
 </html>
