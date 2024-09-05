@@ -40,64 +40,6 @@
     </div>
   </section>
 
-  <section id="ai"></section>
-    <div class="container">
-      <h1>AI Assistant</h1>
-      <form id="assistant-form">
-          <label for="current-field">Current Field:</label>
-          <input type="text" id="current-field" name="current_field"><br><br>
-          
-          <label for="desired-field">Desired Field:</label>
-          <input type="text" id="desired-field" name="desired_field"><br><br>
-          
-          <button type="submit">Get Advice</button>
-      </form>
-  
-      <div id="advice-container">
-          <!-- Advice from AI will be displayed here -->
-      </div>
-  
-      <script>
-          document.getElementById('assistant-form').addEventListener('submit', function(event) {
-              event.preventDefault();
-  
-              // Fetch input values
-              const currentField = document.getElementById('current-field').value;
-              const desiredField = document.getElementById('desired-field').value;
-  
-              // Create JSON object with input data
-              const formData = {
-                  current_field: currentField,
-                  desired_field: desiredField
-              };
-  
-              // Send POST request to Flask backend
-              fetch('/predict', {
-                  method: 'POST',
-                  headers: {
-                      'Content-Type': 'application/json'
-                  },
-                  body: JSON.stringify(formData)
-              })
-              .then(response => response.json())
-              .then(data => {
-                  // Display AI advice or error message
-                  const adviceContainer = document.getElementById('advice-container');
-                  if (data.advice) {
-                      adviceContainer.innerHTML = `<p>${data.advice}</p>`;
-                  } else if (data.error) {
-                      adviceContainer.innerHTML = `<p>Error: ${data.error}</p>`;
-                  }
-              })
-              .catch(error => {
-                  console.error('Error:', error);
-                  const adviceContainer = document.getElementById('advice-container');
-                  adviceContainer.innerHTML = `<p>Error: ${error.message}</p>`;
-              });
-          });
-      </script>
-    </div>
-
   <section id="resources">
     <div class="container">
       <h2>Educational Resources</h2>
@@ -150,46 +92,9 @@
     </div>
   </section>
 
-  <section id="blog">
-    <div class="container">
-      <h2>Engineering Blog</h2>
-      <div class="blog-cards">
-        <!-- Example of blog cards, you can add more as needed -->
-        <div class="blog-card">
-          <img src="blog1.jpg" alt="Blog 1">
-          <h3>Advancements in Renewable Energy</h3>
-          <p>Stay updated with the latest breakthroughs in renewable energy technologies.</p>
-          <a href="blog1.html" class="btn">Read More</a>
-        </div>
-        <div class="blog-card">
-          <img src="blog2.jpg" alt="Blog 2">
-          <h3>The Future of Artificial Intelligence</h3>
-          <p>Discover the cutting-edge developments in AI and its potential impact on engineering.</p>
-          <a href="blog2.html" class="btn">Read More</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="community">
-    <div class="container">
-      <h2>Engineering Community</h2>
-      <p>Connect with fellow engineering enthusiasts, industry professionals, and mentors in our vibrant community. Engage in discussions, ask questions, and share your insights with like-minded individuals.</p>
-      <a href="forum.html" class="btn">Join Us Today!</a>
-    </div>
-  </section>
-
-  <section id="intro-engineering">
-    <div class="container">
-      <h2>Introduction to Engineering</h2>
-      <p>Explore beginner, intermediate, and experienced level articles, videos, and lessons to start your engineering journey.</p>
-      <a href="beginner.html" class="btn">Get Started</a>
-    </div>
-  </section>
-
   <footer>
     <div class="container">
-      <p>&copy; 2023 IngeniousPath. All rights reserved.</p>
+      <p>&copy; 2024 IngeniousPath. All rights reserved.</p>
     </div>
   </footer>
 

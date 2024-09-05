@@ -3,7 +3,7 @@ import openai
 import logging
 
 # Instantiate the OpenAI client with your API key
-openai.api_key = 'sk-proj-1UXCgAKORfDMCBztR4VgT3BlbkFJP0jyAnegWdRYlJ33SQ4R'
+openai.api_key = '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'
 
 app = Flask(__name__)
 
@@ -40,7 +40,7 @@ def predict():
         data = request.json
         current_field = data['current_field']
         desired_field = data['desired_field']
-        user_message = f"I am currently working in the field of {current_field}. I want to transition to the field of {desired_field}. Can you provide me with a detailed plan on how I can make this transition easier?"
+        user_message = f"I am currently working in the field of {current_field}. I want to transition to the field of {desired_field}. Can you provide me with a detailed plan on how I can make this transition easier? Also, could you provide five of the best companies to look at for careers in the new field?"
         
         # Get the AI-generated response using the chat completions endpoint
         response = openai.ChatCompletion.create(
