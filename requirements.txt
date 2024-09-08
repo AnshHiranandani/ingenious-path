@@ -1,4 +1,4 @@
 Flask
 scikit-learn
 pandas
-openai
+openai==0.28.0
