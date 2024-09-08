@@ -87,4 +87,17 @@ async function getCareerAdvice(event) {
 
     const data = await response.json();
     adviceOutput.innerHTML = `<p>${data.advice}</p>`;
+    function formatResponse(rawText) {
+      // Split the text by period followed by a space, or by newline
+      let sentences = rawText.split(/(?<=[.!?])\s+/);
+      // Join the sentences with newline characters
+      return sentences.join('<br/>');
+  }
+    // Assuming `aiResponse` is the raw text received from the AI model
+let aiResponse = "Your raw text from AI model...";
+let formattedResponse = formatResponse(aiResponse);
+
+// Display the formatted response in the designated HTML element
+document.getElementById('advice-container').innerHTML = formattedResponse;
+
 }
