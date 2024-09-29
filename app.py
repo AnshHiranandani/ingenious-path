@@ -3,7 +3,7 @@ import openai
 import logging
 
 # Instantiate the OpenAI client with your API key
-openai.api_key = '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'
+openai.api_key = 'sk-bycFNdnt6nzQjFs5Cfg8ttXGW1RTMzUMbCUSotz4X_T3BlbkFJZPpmmFmCv3yoZESzXg1ohfQphfv-REo0aWBIKtnCoA'
 
 app = Flask(__name__)
 
