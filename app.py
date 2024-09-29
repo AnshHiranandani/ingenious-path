@@ -1,9 +1,14 @@
 from flask import Flask, request, jsonify, render_template
 import openai
 import logging
+import os
+
+from dotenv import load_dotenv
+
+load_dotenv()  # Load environment variables from .env file
 
 # Instantiate the OpenAI client with your API key
-openai.api_key = 'sk-bycFNdnt6nzQjFs5Cfg8ttXGW1RTMzUMbCUSotz4X_T3BlbkFJZPpmmFmCv3yoZESzXg1ohfQphfv-REo0aWBIKtnCoA'
+openai.api_key = os.getenv("OPENAI_API_KEY")
 
 app = Flask(__name__)
 
